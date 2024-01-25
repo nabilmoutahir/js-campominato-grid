@@ -10,5 +10,9 @@ console.log(gridGameElement)
 
 // event listener start game
 buttonStartElement.addEventListener('click', function (){
-    generateGrid ('gridGameElement')
+    generateGrid ('gridGameElement', bombsGen)
+
+    // PT2 FUNZIONE ARRAY
+   bombsGen
+   console.log(bombsGen)
 })

@@ -1,5 +1,5 @@
-// funzione genera gliglia
-function generateGrid (container) {
+// funzione genera gliglia        PT2 
+function generateGrid (container, bombsGen) {
 
     // svuoto HTML del container
     gridGameElement.innerHTML = '';
@@ -15,7 +15,7 @@ function generateGrid (container) {
     }
 }
 
-// funzione genera cella
+// funzione genera cella        PT2
 function generateCell (Text) {
 
     // creo elemento html
@@ -33,6 +33,34 @@ function generateCell (Text) {
         console.log('il numero clickato è : ' + cell.innerText)
     });
 
+    console.log('bombsGen')
+
     // ritorno valore
     return cell;
 }
+
+
+// * parte 2 GENERO FUNZIONE ARRAY DI NUMERI CASUALI
+bombsGen = generateBombsArray()
+// creo array
+function generateBombsArray () {
+
+    let bombsArray = [];
+
+    // finché l'array non arriva a 16
+    while (bombsArray.length < 16) {
+        // creo un numero random
+        let randomNum = Math.floor(Math.random() * 100) + 1;
+        // se l'array non include un determinato numero
+        if (!bombsArray.includes(randomNum)) {
+            // lo aggiungo
+            bombsArray.push(randomNum)
+        }
+    }
+    // stampo array
+    let bombs = bombsArray
+    console.log(bombs)
+
+    return bombsArray
+}
+
