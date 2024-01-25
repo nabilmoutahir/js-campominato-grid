@@ -28,6 +28,9 @@ function generateCell (Text) {
     cell.addEventListener ('click', function (){
         // comando per cambiare colore 
         this.classList.toggle('active')
+
+        // stampo numero clickato
+        console.log('il numero clickato è : ' + cell.innerText)
     });
 
     // ritorno valore
