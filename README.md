@@ -27,3 +27,16 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 ## SVOLGIMENTO
 
+- recupero elementi del DOM
+
+- creo funzione per generare griglia
+
+- creo funzione per generare le celle
+
+- creo event listener che al click:
+
+    - colora cella
+
+    - stampa un messaggio in console con il numero
+
+
