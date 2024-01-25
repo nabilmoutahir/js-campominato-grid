@@ -8,4 +8,7 @@ console.log (buttonStartElement)
 const gridGameElement = document.getElementById('game-grid')
 console.log(gridGameElement)
 
-// generateGrid ()
+// event listener start game
+buttonStartElement.addEventListener('click', function (){
+    generateGrid ('gridGameElement')
+})
