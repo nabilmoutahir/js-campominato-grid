@@ -1,6 +1,5 @@
 header {
     height: 15vh;
-    
 }
 
 .wrapper {
@@ -11,7 +10,7 @@ header {
 .cells-container {
     height: 100%;
     aspect-ratio: 1;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .cell {
