@@ -1,0 +1,24 @@
+header {
+    height: 15vh;
+    
+}
+
+.wrapper {
+    height: 85vh;
+    background-color: aquamarine;
+}
+
+.cells-container {
+    height: 100%;
+    aspect-ratio: 1;
+    border: 1px solid black;
+}
+
+.cell {
+    width: calc(100% / 10);
+    border: 1px solid black;
+}
+
+.active {
+    background-color: aqua;
+}
