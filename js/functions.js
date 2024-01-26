@@ -15,6 +15,9 @@ function generateGrid (container, bombsGen) {
     }
 }
 
+// variabile per finire il gioco
+let gameOver = false
+
 // funzione genera cella        PT2
 function generateCell (i) {
 
@@ -27,13 +30,23 @@ function generateCell (i) {
 
     // PT2 SE CLICKO UN ELEMENTO PRESENTE NELL'ARRAY DIVENTA ROSSO
     cell.addEventListener ('click', function (){
-       if (bombsGen.includes(i)){
-        this.classList.add('bomb');
-        alert('OPS HAI PRESO UNA BOMBA PARTITA FINITA');
-        location.reload();
-       } else {
-        this.classList.add('active')
-       }
+        if (!gameOver) {
+        
+            // counter
+            onClick ()
+            
+            // condizioni
+            if (!bombsGen.includes(i)){
+                this.classList.add('active')
+                pointCounter.innerText = ('Counter: ' + (clicks - 1))
+            } else if (bombsGen.includes(i)){
+                this.classList.add('bomb');
+                gameOver = true
+                pointCounter.innerText = ('Counter: ' + (clicks - 1) + " Hai perso ricarica!")
+            } 
+        
+        }
+
     });
 
     // ritorno valore
@@ -65,3 +78,9 @@ function generateBombsArray () {
     return bombsArray;
 }
 
+// click counter
+let clicks = 1
+
+function onClick () {
+    clicks += 1;
+};
