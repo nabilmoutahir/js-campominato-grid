@@ -16,24 +16,25 @@ function generateGrid (container, bombsGen) {
 }
 
 // funzione genera cella        PT2
-function generateCell (Text) {
+function generateCell (i) {
 
     // creo elemento html
     const cell = document.createElement('div');
     // aggiungo classi
     cell.classList.add('cell');
     
-    cell.innerText = Text;
+    cell.innerText = i;
 
+    // PT2 SE CLICKO UN ELEMENTO PRESENTE NELL'ARRAY DIVENTA ROSSO
     cell.addEventListener ('click', function (){
-        // comando per cambiare colore 
-        this.classList.toggle('active')
-
-        // stampo numero clickato
-        console.log('il numero clickato è : ' + cell.innerText)
+       if (bombsGen.includes(i)){
+        this.classList.add('bomb');
+        alert('OPS HAI PRESO UNA BOMBA PARTITA FINITA');
+        location.reload();
+       } else {
+        this.classList.add('active')
+       }
     });
-
-    console.log('bombsGen')
 
     // ritorno valore
     return cell;
@@ -58,9 +59,9 @@ function generateBombsArray () {
         }
     }
     // stampo array
-    let bombs = bombsArray
-    console.log(bombs)
+    let bombs = bombsArray;
+    console.log(bombs);
 
-    return bombsArray
+    return bombsArray;
 }
 

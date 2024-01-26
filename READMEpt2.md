@@ -23,4 +23,8 @@ Quando si clicca su una bomba e finisce la partita, il software scopre tutte le 
 
 - genero array con 16 numeri casuali 
 
-- 
+- inserisco array nell'event listener se:
+
+    - clicko su una cella contenente un valore dell'array si colora di rosso e la partita termina
+
+    - altrimenti si colora di azzurro e continua
